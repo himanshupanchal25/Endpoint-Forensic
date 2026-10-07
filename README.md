@@ -38,4 +38,4 @@ The aim of this project is to collect and correlate evidence to reconstruct the 
 
 # Disclaimer
 
-These Investigation and anlaysis was performed in an isolated laboratory environment for educational and security research purpose the disk images and forensics artifacts used in this report and project publicily available i do not claim onership of the original datasests.
+These Investigation and anlaysis was performed in an isolated laboratory environment for educational and security research purpose the disk images and forensic artifacts used in this report and project publicily available i do not claim ownership of the original datasests.
