@@ -30,7 +30,7 @@ This project focus on endpoint forensic and investigation analysis of digital ar
 - Registry Explorer for Windows Registry analysis
 - RegRipper for registry artifact extraction and readability
 - Volatility3 for memory dump forensics
--Zeek and Wireshark for packet and network analysis
+- Zeek and Wireshark for packet and network analysis
 
 ## Conclusion
 
