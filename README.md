@@ -10,7 +10,8 @@ This project focus on endpoint forensic and investigation analysis of digital ar
 - identify indicators of compromise (IOCs)
 - Identify c2 and communication channels
 - Build an evidence-based forensic timeline and map findings to MITRE attack timeline
-- Document investigation findings and prepare forensic reports
+- Document investigation findings and prepare forensic reports.
+- Network forensic and Packet analysis.
 
 ## Investigation Workflow
 
