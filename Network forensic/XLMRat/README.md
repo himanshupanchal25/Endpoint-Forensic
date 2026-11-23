@@ -18,7 +18,7 @@ A compromised machine has been flagged due to suspicious network traffic,likely 
 
 ![traffic](images/traffic.png)
 
-PCAP analysis indicates there was no Nmap scan or reconnaissance traffic. all traffic was generated via HTTP possibly indicating that a compromised user downloaded suspicious files or malware,After analyzing the HTTP requests made by the user, it clearly indicates visiting a malicious link and the download of malware or a payload **http://45[.]126[.]209[.]4:222/mdm[.]jpg**
+PCAP analysis indicates there was no Nmap scan or reconnaissance traffic. all traffic was generated via HTTP possibly indicating that a compromised user downloaded suspicious files or malware, After analyzing the HTTP requests made by the user, it clearly indicates visiting a malicious link and the download of malware or a payload **http://45[.]126[.]209[.]4:222/mdm[.]jpg**
 
 - Which hosting provider owns the associated IP address?
 
