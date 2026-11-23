@@ -18,7 +18,7 @@ A compromised machine has been flagged due to suspicious network traffic,likely 
 
 ![traffic](images/traffic.png)
 
-PCAP analysis indicates there was no Nmap scan or reconnaissance traffic. all traffic was generated via HTTP possibly indicating that a compromised user downloaded suspicious files or malware, After analyzing the HTTP requests made by the user, it clearly indicates visiting a malicious link and the download of malware or a payload **http://45[.]126[.]209[.]4:222/mdm[.]jpg**
+PCAP analysis indicates there was no Nmap scan or reconnaissance traffic. all traffic was generated via HTTP possibly indicating that a compromised user downloaded suspicious files or malware,After analyzing the HTTP requests made by the user, it clearly indicates visiting a malicious link and the download of malware or a payload **http://45[.]126[.]209[.]4:222/mdm[.]jpg**
 
 - Which hosting provider owns the associated IP address?
 
@@ -42,3 +42,26 @@ Virustotal report reveal it belong to family `asyncrat, msil, crysan`, Threat ca
 
 - What is the PE header compile (Creation Time) timestamp of the malware?
 
+![pe](images/pe.png)
+
+Now the file has turned out to be malicious. I started analyzing the file header via `peread` to extract
+information about the file like creation date ***Mon, 30 Oct 2023 15:08:44 UTC*** and imported functions.
+
+- Which LOLBin is leveraged for stealthy process execution in this script? Provide the full path.
+
+
+![script](images/script.png)
+
+After extracting the file information, I moved on to start analyzing the payload or script. The resulting script
+consists of two executable files converted to hexadecimal, and then executed via `system`. One of them is ***`$NA = 'C:\W#######indow############s\Mi####cr'-replace  '#', ''
+$AC = $NA + 'osof#####t.NET\Fra###mework\v4.0.303###19\R##egSvc#####s.exe'-replace  '#', ''
+$VA = @($AC, $NKbb)`***(C:\Windows\Microsoft.NET\Framework\v4.0.30319\RegSvcs.exe)
+
+
+***LOLBin stands for Living Off The Land Binary ---> It refers to a legitimate, built-in operating system executable that attackers abuse to perform malicious activities instead of bringing their own tools or executables.***
+
+- The script is designed to drop several files. List the names of the files dropped by the script.
+ 
+![file](images/filedrop.png)
+
+After reaching the end of the script, it all started to make sense. The threat actor used various types of obfuscated scripts in the payload, such as VBScript, PowerShell, Batch, C#, and .NET, to execute the attack and drop some files in the compromised user directory `C:\Users\Public`,***Conted.vbs,Conted.ps1,Conted.bat***.
