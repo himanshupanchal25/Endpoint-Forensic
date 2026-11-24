@@ -39,8 +39,12 @@ Since the payload is written in JavaScript (as indicated by its extension), it i
 
 - What is the file extension of the second malicious file utilized by the attacker?
 
+![dll](images/dll.png)
+
 After reviewing the first file, the second file, **resources.dll**, with the .dll extension looked suspicious because it is often used by attackers to link libraries.
 
 - What is the MD5 hash of the second malicious file?
+
+![hash](images/md5.png)
 
 Then again i performed static analysis by extracting the hashes of resources.dll **e758e07113016aca55d9eda2b0ffeebe** and search them on VirusTotal. Surprisingly, this file was also flagged by 57 security vendors.
