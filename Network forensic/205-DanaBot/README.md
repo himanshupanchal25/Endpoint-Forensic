@@ -16,7 +16,6 @@ The SOC team has detected suspicious activity in the network traffic, revealing 
 - Which IP address was used by the attacker during the initial access?
 
 ![traffic](images/traffic.png)
-![virustotal](images/virustotal.png)
 
 I recovered a PCAP file containing network traffic from the compromised host. Initially, all DNS
 requests, HTTP, and TCP-based traffic appeared normal to me. However, I noticed something suspicious a host with IP **10.0.2.141** downloaded a file from destination IP **62.173.142.148** a (Nginx Ubuntu) server with extensions **.dll** and **.txt**.
