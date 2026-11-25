@@ -29,6 +29,7 @@ Since it is a DLL file, there may be additional executable files utilizing this 
 - What is the SHA-256 hash of the malicious file used for initial access?
 
 ![virustotal](images/java.png)
+
 ![sha256](images/hash.png)
 
 Again, I extracted the hash of this file too **847b4ad90b1daba2d9117a8e05776f3f902dda593fb1252289538acf476c4268** and searched it on VirusTotal, and that file was also flagged by 32 security vendors.
