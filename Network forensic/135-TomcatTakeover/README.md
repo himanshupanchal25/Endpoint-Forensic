@@ -40,6 +40,7 @@ The attacker is still at the Reconnaissance stage. As a result of the Nmap scan,
 - Following the discovery of open ports on our server, it appears that the attacker attempted to enumerate and uncover directories and files on our web server. Which tools can you identify from the analysis that assisted the attacker in this enumeration process?
 
 ![dir](images/hidden_dir.png)
+
 ![tool](images/gobuster.png)
 
 The threat actor gained insight into the web server and services it hosts. He chose to exploit port 8080 and enumerate hidden directories and files on the server. After closely monitoring the requests sent by the attacker to the server, the automated tool used for uncovering directories is the popular tool **Gobuster** a well-known directory brute-forcing tool.
@@ -53,6 +54,7 @@ As a result of the brute-force enumeration, the attacker was able to find the ad
 - After accessing the admin panel, the attacker brute-forced the login. What credentials did the attacker successfully use? (Provide them in username:password format)
 
 ![brute](images/admin_passwd.png)
+
 ![admin](images/admin_tomcat.png)
 
 The situation escalated here, The attacker brute-forced passwords, and after 3-4 requests, he successfully cracked the admin credentials: **admin:tomcat**(http.authbasic).
@@ -60,6 +62,7 @@ The situation escalated here, The attacker brute-forced passwords, and after 3-4
 - Once inside the admin panel, the attacker attempted to upload a file with the intent of establishing a reverse shell. Can you identify the name of this malicious file from the captured data?
 
 ![POST](images/post.png)
+
 ![file](images/payload.png)
 
 The attacker utilized the HTTP POST method to upload a shell to the URI "/manager/html/upload" on our server,using parameters `name="**deployWar**"` and `filename="**JXQOZY.war**"` (1083 bytes).
