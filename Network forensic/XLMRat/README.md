@@ -29,6 +29,7 @@ After carefully retrieving and examining the requested URL, it clearly indicates
 - By analyzing the malicious scripts, two payloads were identified: a loader and a secondary executable. What is the SHA256 of the malware executable?
 
 ![virustotal](images/payload.png)
+
 ![hash](images/hash.png)
 
 The compromised user downloaded two files from a suspicious IP 45[.]126[.]209[.]4:222 address via HTTP GET requests for
